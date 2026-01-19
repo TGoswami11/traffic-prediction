@@ -25,7 +25,7 @@ data_file = Path(config.PROCESSED_DATA_DIR) / "traffic_2023_01_featured.csv"
 df = pd.read_csv(data_file)
 df['timestamp'] = pd.to_datetime(df['timestamp'])
 
-print(f"✅ Loaded {len(df)} records")
+print(f" Loaded {len(df)} records")
 print(f"Date range: {df['timestamp'].min()} to {df['timestamp'].max()}")
 
 # Split data by date
@@ -68,7 +68,7 @@ model_path = Path(config.MODEL_DIR) / "xgboost_jan2023.pkl"
 model.save_model(model_path)
 
 print("\n" + "="*80)
-print("✅ TRAINING COMPLETE!")
+print(" TRAINING COMPLETE!")
 print("="*80)
 print(f"Test MAE:  {test_metrics['MAE']:.2f}")
 print(f"Test RMSE: {test_metrics['RMSE']:.2f}")
