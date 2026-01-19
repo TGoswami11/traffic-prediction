@@ -38,9 +38,9 @@ class TrafficPreprocessor:
 
             missing_after = self.df.isnull().sum().sum()
             print(f"Missing values after: {missing_after}")
-            print(f"✅ Cleaned {missing_before - missing_after} missing values")
+            print(f" Cleaned {missing_before - missing_after} missing values")
         else:
-            print("✅ No missing values found")
+            print(" No missing values found")
 
         return self
 
@@ -69,7 +69,7 @@ class TrafficPreprocessor:
         after_len = len(self.df)
         total_removed = before_len - after_len
 
-        print(f"\n✅ Total removed: {total_removed} rows ({total_removed / before_len * 100:.1f}%)")
+        print(f"\n Total removed: {total_removed} rows ({total_removed / before_len * 100:.1f}%)")
 
         return self
 
@@ -100,7 +100,7 @@ class TrafficPreprocessor:
             numeric_cols = self.df.select_dtypes(include=[np.number]).columns
             self.df[numeric_cols] = self.df[numeric_cols].interpolate(method='linear')
 
-        print(f"✅ Complete: {len(self.df)} hourly records")
+        print(f" Complete: {len(self.df)} hourly records")
 
         return self
 
@@ -124,7 +124,7 @@ if __name__ == "__main__":
     input_file = Path(config.PROCESSED_DATA_DIR) / "traffic_2023_01_raw.csv"
 
     if not input_file.exists():
-        print(f"❌ File not found: {input_file}")
+        print(f" File not found: {input_file}")
         print("Please run: python src/data/data_loader.py first")
     else:
         df = pd.read_csv(input_file)
