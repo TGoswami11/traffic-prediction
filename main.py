@@ -79,20 +79,20 @@ def test_project_setup():
     print(f"   Traffic range: {df['traffic_count'].min()} to {df['traffic_count'].max()}")
 
     # Test 4: Save sample data
-    print("\n✅ Test 4: Save Sample Data")
+    print("\n Test 4: Save Sample Data")
     output_path = config.PROCESSED_DATA_DIR + '/sample_traffic_data.csv'
     df.to_csv(output_path, index=False)
     print(f"   Saved to: {output_path}")
 
     # Test 5: Basic statistics
-    print("\n✅ Test 5: Basic Statistics")
+    print("\n Test 5: Basic Statistics")
     print(f"   Mean traffic: {df['traffic_count'].mean():.2f}")
     print(f"   Std traffic: {df['traffic_count'].std():.2f}")
     print(f"   Weekday avg: {df[df['is_weekend'] == 0]['traffic_count'].mean():.2f}")
     print(f"   Weekend avg: {df[df['is_weekend'] == 1]['traffic_count'].mean():.2f}")
 
     print("\n" + "=" * 80)
-    print("✅ PROJECT SETUP COMPLETE!")
+    print(" PROJECT SETUP COMPLETE!")
     print("=" * 80)
     print("\nNext steps:")
     print("1. Start implementing data_loader.py")
