@@ -49,4 +49,4 @@ LSTM_PARAMS = {
 
 RANDOM_SEED = 42
 
-print(f"✅ Configuration loaded - January 2023")
+print(f" Configuration loaded - January 2023")
