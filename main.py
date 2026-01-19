@@ -22,13 +22,13 @@ def test_project_setup():
     print("=" * 80)
 
     # Test 1: Configuration
-    print("\n✅ Test 1: Configuration")
+    print("\n Test 1: Configuration")
     print(f"   Project Root: {config.PROJECT_ROOT}")
     print(f"   Data Directory: {config.DATA_DIR}")
     print(f"   Models Directory: {config.MODEL_DIR}")
 
     # Test 2: Import modules
-    print("\n✅ Test 2: Import Core Libraries")
+    print("\n Test 2: Import Core Libraries")
     try:
         import pandas as pd
         import numpy as np
@@ -40,11 +40,11 @@ def test_project_setup():
         import statsmodels
         print("   All core libraries imported successfully!")
     except ImportError as e:
-        print(f"   ❌ Error importing: {e}")
+        print(f"  Error importing: {e}")
         return
 
     # Test 3: Generate sample data
-    print("\n✅ Test 3: Generate Sample Traffic Data")
+    print("\n Test 3: Generate Sample Traffic Data")
 
     np.random.seed(42)
 
