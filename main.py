@@ -22,13 +22,13 @@ def test_project_setup():
     print("=" * 80)
 
     # Test 1: Configuration
-    print("\n✅ Test 1: Configuration")
+    print("\n Test 1: Configuration")
     print(f"   Project Root: {config.PROJECT_ROOT}")
     print(f"   Data Directory: {config.DATA_DIR}")
     print(f"   Models Directory: {config.MODEL_DIR}")
 
     # Test 2: Import modules
-    print("\n✅ Test 2: Import Core Libraries")
+    print("\n Test 2: Import Core Libraries")
     try:
         import pandas as pd
         import numpy as np
@@ -40,11 +40,11 @@ def test_project_setup():
         import statsmodels
         print("   All core libraries imported successfully!")
     except ImportError as e:
-        print(f"   ❌ Error importing: {e}")
+        print(f"    Error importing: {e}")
         return
 
     # Test 3: Generate sample data
-    print("\n✅ Test 3: Generate Sample Traffic Data")
+    print("\n Test 3: Generate Sample Traffic Data")
 
     np.random.seed(42)
 
@@ -79,20 +79,20 @@ def test_project_setup():
     print(f"   Traffic range: {df['traffic_count'].min()} to {df['traffic_count'].max()}")
 
     # Test 4: Save sample data
-    print("\n✅ Test 4: Save Sample Data")
+    print("\n Test 4: Save Sample Data")
     output_path = config.PROCESSED_DATA_DIR + '/sample_traffic_data.csv'
     df.to_csv(output_path, index=False)
     print(f"   Saved to: {output_path}")
 
     # Test 5: Basic statistics
-    print("\n✅ Test 5: Basic Statistics")
+    print("\n Test 5: Basic Statistics")
     print(f"   Mean traffic: {df['traffic_count'].mean():.2f}")
     print(f"   Std traffic: {df['traffic_count'].std():.2f}")
     print(f"   Weekday avg: {df[df['is_weekend'] == 0]['traffic_count'].mean():.2f}")
     print(f"   Weekend avg: {df[df['is_weekend'] == 1]['traffic_count'].mean():.2f}")
 
     print("\n" + "=" * 80)
-    print("✅ PROJECT SETUP COMPLETE!")
+    print(" PROJECT SETUP COMPLETE!")
     print("=" * 80)
     print("\nNext steps:")
     print("1. Start implementing data_loader.py")
