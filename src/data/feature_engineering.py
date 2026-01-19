@@ -42,7 +42,7 @@ class FeatureEngineer:
                 ((self.df['hour'] >= 17) & (self.df['hour'] <= 19))
         ).astype(int)
 
-        print("✅ Created 7 temporal features")
+        print(" Created 7 temporal features")
         return self
 
     def create_lag_features(self):
@@ -59,7 +59,7 @@ class FeatureEngineer:
             self.df[col_name] = self.df[self.target_col].shift(lag)
             print(f"  ✓ {col_name}")
 
-        print(f"✅ Created {len(lags)} lag features")
+        print(f" Created {len(lags)} lag features")
         return self
 
     def create_rolling_features(self):
@@ -88,7 +88,7 @@ class FeatureEngineer:
 
             print(f"  ✓ {w}h window: mean, std")
 
-        print(f"✅ Created {len(windows) * 2} rolling features")
+        print(f" Created {len(windows) * 2} rolling features")
         return self
 
     def drop_na_rows(self):
@@ -102,7 +102,7 @@ class FeatureEngineer:
         after = len(self.df)
 
         print(f"Dropped {before - after} NaN rows")
-        print(f"✅ Final: {after} rows ready for modeling")
+        print(f" Final: {after} rows ready for modeling")
 
         return self
 
@@ -134,7 +134,7 @@ if __name__ == "__main__":
     input_file = Path(config.PROCESSED_DATA_DIR) / "traffic_2023_01_clean.csv"
 
     if not input_file.exists():
-        print(f"❌ File not found: {input_file}")
+        print(f" File not found: {input_file}")
         print("Please run: python src/data/preprocessing.py first")
     else:
         df = pd.read_csv(input_file)
