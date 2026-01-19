@@ -21,7 +21,7 @@ def load_january_csv():
     csv_file = Path(config.RAW_DATA_DIR) / "bast_2023_01_converted.csv"
 
     if not csv_file.exists():
-        print(f"❌ File not found: {csv_file}")
+        print(f" File not found: {csv_file}")
         print(f"\nPlease copy 'bast_2023_01_converted.csv' to:")
         print(f"  {config.RAW_DATA_DIR}")
         raise FileNotFoundError("CSV file not found")
@@ -30,7 +30,7 @@ def load_january_csv():
     df = pd.read_csv(csv_file)
     df['timestamp'] = pd.to_datetime(df['timestamp'])
 
-    print(f"\n✅ Data loaded successfully!")
+    print(f"\n Data loaded successfully!")
     print(f"   Shape: {df.shape}")
     print(f"   Columns: {df.columns.tolist()}")
     print(f"   Date range: {df['timestamp'].min()} to {df['timestamp'].max()}")
@@ -53,4 +53,4 @@ if __name__ == "__main__":
     # Save to processed
     output = Path(config.PROCESSED_DATA_DIR) / "traffic_2023_01_raw.csv"
     df.to_csv(output, index=False)
-    print(f"✅ Saved to: {output}\n")
+    print(f" Saved to: {output}\n")
