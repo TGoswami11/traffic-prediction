@@ -86,7 +86,7 @@ class XGBoostTrafficModel:
         else:
             self.model.fit(X_train, y_train)
 
-        print("\n✅ Training complete!")
+        print("\n Training complete!")
 
     def predict(self, X):
         """Make predictions"""
@@ -153,12 +153,12 @@ class XGBoostTrafficModel:
         filepath = Path(filepath)
         filepath.parent.mkdir(parents=True, exist_ok=True)
         joblib.dump(self.model, filepath)
-        print(f"✅ Model saved to: {filepath}")
+        print(f" Model saved to: {filepath}")
 
     def load_model(self, filepath):
         """Load trained model"""
         self.model = joblib.load(filepath)
-        print(f"✅ Model loaded from: {filepath}")
+        print(f" Model loaded from: {filepath}")
 
 
 # Test/Demo
