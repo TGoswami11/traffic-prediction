@@ -216,7 +216,7 @@ class LSTMTrafficModel:
                 if (epoch + 1) % 5 == 0:
                     print(f"Epoch [{epoch + 1}/{epochs}] - Train Loss: {avg_train_loss:.4f}")
 
-        print("\n✅ Training complete!")
+        print("\n Training complete!")
 
     def predict(self, X):
         """
@@ -285,7 +285,7 @@ class LSTMTrafficModel:
             'optimizer_state': self.optimizer.state_dict(),
             'history': self.history
         }, filepath)
-        print(f"✅ Model saved to: {filepath}")
+        print(f" Model saved to: {filepath}")
 
     def load_model(self, filepath):
         """Load trained model"""
@@ -293,7 +293,7 @@ class LSTMTrafficModel:
         self.model.load_state_dict(checkpoint['model_state'])
         self.optimizer.load_state_dict(checkpoint['optimizer_state'])
         self.history = checkpoint['history']
-        print(f"✅ Model loaded from: {filepath}")
+        print(f" Model loaded from: {filepath}")
 
 
 # Test
