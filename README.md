@@ -18,7 +18,7 @@ Machine learning system for predicting highway traffic volumes using BASt data f
 
 ## Models Implemented
 
-1. **XGBoost** (Winner! 🏆)
+1. **XGBoost** 
    - MAE: 19.13
    - R²: 0.9545 (95.45% accuracy)
    
@@ -28,10 +28,10 @@ Machine learning system for predicting highway traffic volumes using BASt data f
 
 ## Key Findings
 
-✅ **XGBoost outperformed LSTM by 74%** on limited dataset  
-✅ Traditional ML excels on small tabular datasets  
-✅ Deep learning requires much more training data  
-✅ Feature engineering is critical for traffic prediction
+ **XGBoost outperformed LSTM by 74%** on limited dataset  
+ Traditional ML excels on small tabular datasets  
+ Deep learning requires much more training data  
+ Feature engineering is critical for traffic prediction
 
 ## Installation
 ```bash
