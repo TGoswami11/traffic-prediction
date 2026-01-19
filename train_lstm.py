@@ -28,7 +28,7 @@ data_file = Path(config.PROCESSED_DATA_DIR) / "traffic_2023_01_featured.csv"
 df = pd.read_csv(data_file)
 df['timestamp'] = pd.to_datetime(df['timestamp'])
 
-print(f"✅ Loaded {len(df)} records")
+print(f" Loaded {len(df)} records")
 
 # Split data by date
 train_df = df[(df['timestamp'] >= config.TRAIN_START) & (df['timestamp'] <= config.TRAIN_END)]
@@ -97,7 +97,7 @@ model_path = Path(config.MODEL_DIR) / "lstm_jan2023.pth"
 model.save_model(model_path)
 
 print("\n" + "="*80)
-print("✅ LSTM TRAINING COMPLETE!")
+print(" LSTM TRAINING COMPLETE!")
 print("="*80)
 print(f"Test MAE:  {test_metrics['MAE']:.2f}")
 print(f"Test RMSE: {test_metrics['RMSE']:.2f}")
