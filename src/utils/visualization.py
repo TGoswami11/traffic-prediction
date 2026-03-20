@@ -48,7 +48,7 @@ def plot_predictions(y_true, y_pred, title="Predictions vs Actual",
 
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Plot saved to: {save_path}")
+        print(f" Plot saved to: {save_path}")
 
     plt.show()
 
@@ -76,7 +76,7 @@ def plot_scatter(y_true, y_pred, title="Actual vs Predicted", save_path=None):
 
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Scatter plot saved to: {save_path}")
+        print(f" Scatter plot saved to: {save_path}")
 
     plt.show()
 
@@ -109,7 +109,7 @@ def plot_residuals(y_true, y_pred, title="Residual Plot", save_path=None):
 
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Residual plot saved to: {save_path}")
+        print(f" Residual plot saved to: {save_path}")
 
     plt.show()
 
@@ -131,7 +131,7 @@ def plot_feature_importance(feature_names, importance_values,
 
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Feature importance plot saved to: {save_path}")
+        print(f" Feature importance plot saved to: {save_path}")
 
     plt.show()
 
@@ -158,7 +158,7 @@ def plot_training_history(history, title="Training History", save_path=None):
 
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Training history plot saved to: {save_path}")
+        print(f" Training history plot saved to: {save_path}")
 
     plt.show()
 
@@ -193,7 +193,7 @@ def plot_model_comparison(results_dict, metric='MAE', save_path=None):
 
     if save_path:
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        print(f"✅ Comparison plot saved to: {save_path}")
+        print(f" Comparison plot saved to: {save_path}")
 
     plt.show()
 
@@ -210,4 +210,4 @@ if __name__ == "__main__":
     plot_scatter(y_true, y_pred, "Test Scatter")
     plot_residuals(y_true, y_pred, "Test Residuals")
 
-    print("\n✅ All visualization functions working!")
+    print("\n All visualization functions working!")

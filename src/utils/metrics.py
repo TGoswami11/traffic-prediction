@@ -85,5 +85,5 @@ def compare_models(results_dict):
 
     # Find best model
     best_model = min(results_dict.items(), key=lambda x: x[1]['MAE'])
-    print(f"🏆 Best Model (by MAE): {best_model[0]}")
+    print(f" Best Model (by MAE): {best_model[0]}")
     print(f"   MAE: {best_model[1]['MAE']:.2f}\n")
